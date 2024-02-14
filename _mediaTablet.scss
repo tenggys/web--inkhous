@@ -1,0 +1,109 @@
+@media (min-width: 736px) and (max-width: 1024px) {
+    .container {
+        max-width: 690px;
+    }
+
+    .promo {
+        height: 380px;
+
+        &__img {
+            width: 330px;
+            height: 380px;
+        }
+
+        &__content {
+
+            &_heading {
+                @include text (500, 40px, 40px, $colorText);
+                margin-bottom: 20px;
+            }
+
+            &_text {
+                @include text (500, 14px, 21px, $grayText);
+                margin-bottom: 40px;
+            }
+
+        }
+    }
+
+    .catalog {
+
+        &__top {
+
+            &_heading {
+                @include text (500, 30px, 33px, $colorText);
+            }
+        }
+
+        &__card {
+
+            &_img {
+                width: 290px;
+                height: 422px;
+            }
+        }
+    }
+
+    .news {
+
+        &__heading {
+            margin-bottom: 30px;
+        }
+
+        &_title {
+            @include text(500, 30px, 30px, $whiteText);
+        }
+
+        &__btn {
+            margin-top: 30px;
+        }
+    }
+
+    .teams {
+
+        &__img {
+            width: 510px;
+            height: 504px;
+        }
+
+        &-flex {
+            display: block;
+        }
+
+        &__content {
+            margin-top: 40px;
+        }
+    }
+
+    .footer {
+        height: 250px;
+        &-flex {
+            display: block;
+        }
+
+        &__left{
+            
+            &-tel {
+                display: flex;
+                justify-content: right;
+                margin-top: -70px;
+            }
+
+            &-text{
+                display: flex;
+                justify-content: right;
+                margin-right: 65px;
+            }
+        }
+
+        &__center {
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+
+        &__right {
+            margin-left: 520px;
+            margin-top: -125px;
+        }
+    }
+}

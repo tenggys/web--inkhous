@@ -1,0 +1,379 @@
+@import "vars";
+@import "mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+   }
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.container {
+    max-width: $widthContainer;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 33px;
+    padding-bottom: 32px;
+    background: $backPaleGreen;
+
+    .header-btn {
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__nav {
+        display: flex; 
+        flex-wrap: wrap;
+        gap: 60px;
+
+        &_ul {
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 60px;
+
+            &-li {
+                @include text (500, 20px, 23.48px, $colorText);
+
+                .a-text {
+                    color: $colorText;
+                }
+
+                .a-text:hover {
+                    color: $greenText;
+                    transition-duration: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+.basket {
+    position: absolute;
+    z-index: 3;
+    margin-left: -300px;
+    top: 70px;
+    right: 0;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.basketRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 10px;
+}
+
+.basketHeader {
+    font-weight: bold;
+}
+
+.basketTotal {
+    font-weight: bold;
+    text-align: right;
+}
+.hidden {
+    display: none;
+}
+
+.promo {
+    margin-bottom: 70px;
+
+    &-flex {
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        margin-left: 30px;
+
+        &_heading {
+            @include text (500, 60px, 66px, $colorText);
+            margin-bottom: 20px;
+
+            &-span {
+                color: $greenText;
+            }
+        }
+
+        &_text {
+            @include text (500, 18px, 27px, $grayText);
+            margin-bottom: 60px;
+        }
+
+        &_btn {
+            border: 1px solid #598D66;
+            padding: 20px 60px 20px 60px;
+            background: none;
+            @include text(500, 20px, 23.48px, $greenText);
+
+            &:hover {
+                color: $whiteText;
+                background: $backGreen;
+                transition-duration: 0.5s;
+                transform: scale(1.25); 
+            }
+        }
+    }
+}
+
+.catalog {
+    margin-bottom: 70px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        &_heading {
+            @include text (500, 40px, 44px, $colorText);
+        }
+
+        &_box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+
+            &-btn {
+                padding: 10px 20px 10px 20px;
+                border: none;
+                border-radius: 20px;
+                @include text (500, 20px, 23.48px, $colorText);
+                background: $btnPaleGreen;
+
+                &:hover {
+                    color: $whiteText;
+                    background: $backGreen;
+                    transition-duration: 0.5s;
+                }
+            }
+        }
+    }
+
+    &-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__card {
+        padding: 20px 20px 30px 20px;
+        background: $backPaleGreen;
+
+        &_img {
+            margin-bottom: 20px;
+        }
+
+        &_author {
+            @include text(500, 18px, 21.13px, $grayText);
+            margin-bottom: 10px;
+        }
+
+        &_name {
+            @include text(500, 30px, 35.22px, $colorText);
+            margin-bottom: 8px;
+        }
+
+        &_note {
+            @include text(500, 18px, 21.13px, $colorText);
+            margin-bottom: 8px;
+        }
+
+        &_price {
+            @include text(500, 24px, 28.18px, $greenText);
+            margin-bottom: 20px;
+        }
+
+        &_btn {
+            @include text(500, 20px, 23.88px, $greenText);
+            padding: 20px 60px 20px 60px;
+            border: 1px solid #598D66;
+            background: $backPaleGreen;
+
+            &:hover {
+                color: $whiteText;
+                background: $backGreen;
+                transition-duration: 0.5s   ;
+            }
+        }
+    }
+}
+
+.active {
+    background: $backGreen;
+    color: $whiteText;
+}
+
+.news {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: url(./img/news.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 70px;
+
+    &__heading {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        &_title {
+            @include text(500, 40px, 40px, $whiteText);
+        }
+    }
+
+    &__text {
+        @include text(500, 18px, 27px, $whiteText);
+    }
+
+    .margin {
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        padding: 20px 60px 20px 60px;
+        @include text(500, 20px, 23.48px, $colorText);
+        background: $btnYelow;
+        border: none;
+        margin-top: 60px;
+
+        &:hover {
+            background: #D9B949;
+            transition-duration: 0.5s;
+            transform: scale(1.25); 
+        }
+    }
+}
+
+.teams {
+    margin-bottom: 70px;
+
+    &-flex {
+        display: flex;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-left: 30px;
+        margin-top: 124px;
+
+
+
+        &_title {
+            @include text(500, 40px, 44px, $colorText);
+        }
+
+        &_text {
+            @include text(500, 18px, 27px, $colorText);
+        }
+
+        &_figures {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+}
+
+.footer {
+    background: $backPaleGreen;
+    padding-top: 23px;
+    padding-bottom: 23px;
+
+    &-logo {
+        margin-bottom: 35px;
+    }
+
+    &-flex {
+        display: flex;
+    }
+
+    &__left {
+
+        &-tel{
+            @include text(500, 20px, 23.48px, $colorText);
+            margin-bottom: 8px;
+            width: 170px
+        }
+        
+        &-text{
+            @include text(500, 18px, 21.13px, $grayText);
+            margin-bottom: 8px;
+        }
+    }
+
+    &__center {
+        display: flex;
+        justify-content: space-between;
+        width: 445px;
+        margin-left: 115px;
+
+        &_item {
+
+            .footer__center_item-title {
+                @include text(500, 20px, 23.48px, $colorText);
+            }
+            
+            .footer__center_item-text {
+                @include text(500, 18px, 27px, $grayText);
+                margin-top: 6px;
+            }
+        }
+    }
+
+    &__right {
+        margin-left: 253px;
+
+        &_svg {
+            display: flex;
+            justify-content: space-between;
+            width: 132px;
+            margin-bottom: 4px;
+        }
+        &_text {
+            @include text(500, 12px, 14.4px, $grayText);
+            margin-top: 6px;
+        }
+    }
+}
+
+svg:hover path {
+    fill: $backGreen;
+    transition-duration: 0.5s;
+}
+
+@import "mediaTablet";
+@import "mediaMob";

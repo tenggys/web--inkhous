@@ -1,0 +1,241 @@
+@media (min-width: 320px) and (max-width: 767px) {
+    .container {
+        max-width: 290px;
+    }
+
+    .header {
+        &__flex {
+            display: block;
+        }
+
+
+        &__nav {
+            margin-top: 32px;
+            width: 30px;
+            height: 30px;
+            background: url(./img/burger.svg) no-repeat;
+
+            &:hover {
+                cursor: pointer;
+            }
+            
+            &:hover .header__nav_ul{
+                display: block;
+
+            }
+
+            &_ul {
+                position: absolute;
+                display: none;
+                top: 130px;
+                padding: 30px;
+                background: $backPaleGreen;
+                width: 100%;
+                margin-left: -160px;
+                
+                &-li {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        
+        .header-btn {
+            display: block;
+            margin-left: 265px;
+            margin-top: -30px;
+
+            &-span {
+                position: absolute;
+                margin-top: 10px;
+            }
+        }
+    }   
+
+    .promo {
+        margin-top: 60px;
+
+        &__img {
+            display: none;
+        }
+
+        &__content {
+            margin-left: 0;
+
+            &_heading {
+                @include text (500, 30px, 30px, $colorText);
+            }
+
+            &_text {
+                @include text (500, 14px, 21px, $colorText);
+                margin-bottom: 40px;
+            }
+
+            &_btn {
+                padding: 14.5px 29px;
+                @include text(500, 18px, 21.13  px, $greenText);
+            
+                &:hover {
+                    transform: scale(1.1); 
+                }
+            }
+
+        }
+    }
+
+    .catalog {
+
+        &__top {
+
+            display: block;
+
+            &_heading {
+                @include text (500, 30px, 33px, $colorText);
+            }
+
+            &_box {
+
+                margin-top: 30px;
+                gap: 10px;
+
+                &-btn {
+                    @include text (500, 18px, 21.13px, $colorText);
+                }
+            }
+        }
+
+        &__card {
+            width: 290px;
+
+
+            &_img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+
+    .news {
+
+        &__heading {
+            gap: 10px;
+            margin-bottom: 20px;
+
+            &_img {
+                width: 50px;
+                height: 50px;
+            }
+
+            &_title {
+                width: 230px;
+                @include text(500, 24px, 24px, $whiteText);
+            }
+        }
+
+        &__text {
+            @include text(500, 16px, 22.4px, $whiteText);
+        }
+
+        .margin {
+            margin-bottom: 20px;
+        }
+
+        &__btn {
+            padding: 14.5px 83.5px;
+
+            &:hover {
+                transform: none; 
+            }
+        }
+        
+    }
+
+    .teams {
+        margin-bottom: 94px;
+
+        &-flex {
+            display: block;
+        }
+
+        &__img {
+            width: 290px;
+            height: 268px;
+        }
+
+        &__content {
+            gap: 20px;
+            margin-top: 30px;
+            margin-left: 0;
+
+            &_title {
+                @include text(500, 24px, 26.4px, $colorText);
+            }
+
+            &_text {
+                @include text(500, 16px, 22.4px, $colorText);
+            }
+
+            &_figures {
+                gap: 25px;
+            }
+        }
+    }
+
+    .footer {
+        height: 430px;
+
+        &__left {
+            &-logo {
+                width: 143px;
+                height: 35px;
+            }
+
+            &-tel{
+                @include text(500, 16px, 18.76px, $colorText);
+            }
+        }
+
+        &__center {
+            display: block;
+            gap: 20px;
+            margin-left: 40px;
+            margin-bottom: 20px;
+
+            
+            &_item {
+
+                .footer__center_item-title {
+                    @include text(500, 16px, 18.78px, $colorText);
+                }
+            
+                .footer__center_item-text {
+                    @include text(500, 16px, 24px, $grayText);
+                    margin-top: 6px;
+                }
+            }
+
+            .item-one {
+                margin-top: 75px;
+                margin-bottom: 20px;
+            }
+
+            .item-two {
+                margin-left: -180px;
+            }
+
+            .item-free {
+                margin-top: -80px;
+            }
+        }
+
+        &__right {
+            margin-left: -540px;
+            margin-top: 320px;
+
+            .footer-box {
+                display: flex;
+                margin-left: -28px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
